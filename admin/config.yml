@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: djnv34/Christopher-portfolio
+  branch: main
+
+media_folder: "Photos"
+public_folder: "/Photos"
+
+collections:
+  - name: "content"
+    label: "Portfolio Content"
+    files:
+
+      - label: "Hero Section"
+        name: "hero"
+        file: "_data/content.json"
+        fields:
+          - { label: "Eyebrow Text", name: "hero_eyebrow", widget: "string" }
+          - { label: "Tagline", name: "hero_title", widget: "string" }
+          - { label: "Demo Reel YouTube ID", name: "demo_reel_id", widget: "string" }
+
+      - label: "About Me"
+        name: "about"
+        file: "_data/content.json"
+        fields:
+          - { label: "Paragraph 1", name: "about_para1", widget: "text" }
+          - { label: "Paragraph 2", name: "about_para2", widget: "text" }
+
+      - label: "Contact"
+        name: "contact"
+        file: "_data/content.json"
+        fields:
+          - { label: "Email", name: "contact_email", widget: "string" }
+          - { label: "Phone", name: "contact_phone", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "YouTube URL", name: "youtube_url", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
