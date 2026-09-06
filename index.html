@@ -7,10 +7,16 @@
 <link rel="icon" type="image/png" href="Logos/Chris Logo.png">
 <link href="stylesheet.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Barlow" rel="stylesheet">
-  
-  <script>
-  if (window.location.hash && window.location.hash.includes('invite_token')) {
-    window.location.href = '/admin/#' + window.location.hash.slice(1);
+
+ <script>
+  if (window.location.hash) {
+    var hash = window.location.hash;
+    if (hash.includes('confirmation_token') || 
+        hash.includes('invite_token') || 
+        hash.includes('recovery_token') || 
+        hash.includes('access_token')) {
+      window.location.href = '/admin/' + hash;
+    }
   }
 </script>
   
