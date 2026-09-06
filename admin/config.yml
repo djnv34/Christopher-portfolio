@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: djnv34/Christopher-portfolio
+  name: git-gateway
   branch: main
 
 media_folder: "Photos"
